@@ -887,6 +887,58 @@ table.roll-table td:first-child { width: 76px; white-space: nowrap; }
 }
 
 /* ==========================================================================
+   Lamma Roses photo gallery
+   ========================================================================== */
+.roses-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 14px;
+}
+.roses-photo-hero {
+  grid-column: 1 / -1;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  background: #e8d5e8;
+}
+.roses-photo-hero img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+.roses-photo {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  background: #e8d5e8;
+  display: flex;
+  flex-direction: column;
+}
+.roses-photo img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.roses-photo figcaption,
+.roses-photo-hero figcaption {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
+@media (max-width: 640px) {
+  .roses-photo-grid { grid-template-columns: 1fr; }
+  .roses-photo-hero img { height: 240px; }
+}
+
+/* ==========================================================================
    Order form
    ========================================================================== */
 .order-form {

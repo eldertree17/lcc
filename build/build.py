@@ -41,11 +41,11 @@ PAGES_CONFIG = {
         "bodyclass": "teams-mens",
     },
     "teams-womens.html": {
-        "title": "Women's Teams",
-        "desc": "Women's cricket at Lamma Cricket Club — history, achievements and how to get involved.",
-        "eyebrow": "Teams",
-        "banner_title": "Women&rsquo;s Teams",
-        "banner_sub": "A proud history of women&rsquo;s cricket at LCC",
+        "title": "Lamma Roses",
+        "desc": "The Lamma Roses — LCC's women's cricket team. Blooming with pride, backed by the best club in Hong Kong.",
+        "eyebrow": "Women's Cricket",
+        "banner_title": "The Lamma Roses",
+        "banner_sub": "Blooming with pride, backed by the best club in Hong Kong",
         "bodyclass": "teams-womens",
     },
     "teams-kids.html": {
