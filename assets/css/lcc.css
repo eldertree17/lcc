@@ -528,10 +528,11 @@ h1, h2, h3, h4 { font-family: var(--serif); color: var(--green); line-height: 1.
   background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
   color: #fff;
   border-radius: 14px;
-  padding: 36px 40px;
+  padding: 40px 44px;
+  margin-top: 32px;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
   box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
@@ -560,15 +561,16 @@ h1, h2, h3, h4 { font-family: var(--serif); color: var(--green); line-height: 1.
   font-size: 12px;
   font-weight: 700;
   color: var(--gold);
-  margin: 0 0 4px;
+  margin: 0 0 10px;
 }
 .featured-chair .name {
   font-family: var(--serif);
   font-size: 32px;
   margin: 0;
+  line-height: 1.15;
   color: #fff;
 }
-.featured-chair .blurb { margin: 6px 0 0; color: rgba(255,255,255,.85); font-size: 15px; }
+.featured-chair .blurb { margin: 12px 0 0; color: rgba(255,255,255,.85); font-size: 15px; line-height: 1.65; }
 
 .committee-grid {
   display: grid;
@@ -719,7 +721,7 @@ a.member-card { text-decoration: none; color: inherit; display: block; }
   font-style: italic;
 }
 
-.btn-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
 .btn {
   display: inline-block;
   padding: 12px 22px;
