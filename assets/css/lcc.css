@@ -847,19 +847,19 @@ table.roll-table {
   table-layout: fixed;
   width: 100%;
   min-width: 0;
-  font-size: 12.5px;
+  font-size: 14.5px;
 }
 table.roll-table th,
 table.roll-table td {
-  padding: 8px 7px;
+  padding: 9px 8px;
   white-space: normal;
   word-break: keep-all;
   overflow-wrap: break-word;
   hyphens: none;
 }
-table.roll-table thead th { font-size: 10.5px; letter-spacing: .02em; white-space: normal; }
+table.roll-table thead th { font-size: 11px; letter-spacing: 0; white-space: normal; overflow-wrap: normal; }
 table.roll-table th:first-child,
-table.roll-table td:first-child { width: 64px; white-space: nowrap; }
+table.roll-table td:first-child { width: 76px; white-space: nowrap; }
 
 .records-defs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
 .record-def {
