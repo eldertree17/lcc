@@ -16,6 +16,14 @@ FOOTER = (PARTIALS / "footer.html").read_text()
 
 # slug -> banner/meta config
 PAGES_CONFIG = {
+    "index.html": {
+        "title": "Home",
+        "desc": "Lamma Cricket Club — competitive and social cricket on Lamma Island, Hong Kong, since 1990.",
+        "eyebrow": "Lamma Cricket Club",
+        "banner_title": "Lamma Cricket Club",
+        "banner_sub": "Solidarity · Sustainability · Pride",
+        "bodyclass": "index",
+    },
     "our-constitution.html": {
         "title": "Our Constitution",
         "desc": "The rules and values of Lamma Cricket Club — membership, governance, discipline and more.",
