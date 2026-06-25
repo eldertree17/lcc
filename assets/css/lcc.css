@@ -752,6 +752,24 @@ a.member-card { text-decoration: none; color: inherit; display: block; }
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
 }
+.members-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.7fr 0.8fr;
+  gap: 16px;
+  align-items: start;
+}
+.record-card ul.cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 0;
+}
+@media (max-width: 820px) {
+  .members-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .record-card ul.cols { grid-template-columns: 1fr; }
+}
 .record-card {
   background: var(--card);
   border: 1px solid var(--line);
