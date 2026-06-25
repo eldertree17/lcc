@@ -32,6 +32,14 @@ PAGES_CONFIG = {
         "banner_sub": "Solidarity · Sustainability · Pride",
         "bodyclass": "our-constitution",
     },
+    "for-the-record.html": {
+        "title": "For the Record",
+        "desc": "Lamma Cricket Club honours board — members, champions, club records and tours.",
+        "eyebrow": "Lamma Cricket Club",
+        "banner_title": "For the Record",
+        "banner_sub": "Members, champions, records & tours",
+        "bodyclass": "for-the-record",
+    },
     "the-executive-committee.html": {
         "title": "The Executive Committee",
         "desc": "Meet the elected Executive Committee of Lamma Cricket Club and their roles & responsibilities.",
