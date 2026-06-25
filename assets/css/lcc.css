@@ -887,6 +887,99 @@ table.roll-table td:first-child { width: 76px; white-space: nowrap; }
 }
 
 /* ==========================================================================
+   Order form
+   ========================================================================== */
+.order-form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 32px 36px;
+  box-shadow: var(--shadow-sm);
+}
+.order-section-head {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-weight: 700;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+.order-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.form-field .req { color: var(--gold); }
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--sans);
+  font-size: 15px;
+  padding: 10px 13px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  transition: border-color .15s, box-shadow .15s;
+  outline: none;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(0,78,66,.1);
+  background: #fff;
+}
+.form-field textarea { resize: vertical; }
+
+.order-items { display: flex; flex-direction: column; gap: 4px; }
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 16px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.order-item-name { font-size: 15px; font-weight: 500; flex: 1; min-width: 0; }
+.order-item-price { color: var(--muted); font-size: 13px; font-weight: 400; margin-left: 6px; }
+.order-item-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.order-item-controls select,
+.order-item-controls input[type="number"] {
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 7px 10px;
+  border: 1.5px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
+  color: var(--ink);
+  outline: none;
+  transition: border-color .15s;
+}
+.order-item-controls input[type="number"] { width: 72px; text-align: center; }
+.order-item-controls select:focus,
+.order-item-controls input:focus { border-color: var(--green); }
+
+@media (max-width: 820px) {
+  .order-grid-2 { grid-template-columns: 1fr; }
+  .order-item { flex-direction: column; align-items: flex-start; }
+  .order-item-controls { justify-content: flex-start; }
+  .order-form { padding: 22px 20px; }
+}
+
+/* ==========================================================================
    Club History page (timeline)
    ========================================================================== */
 .history-intro {
