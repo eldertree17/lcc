@@ -20,9 +20,8 @@ PAGES_CONFIG = {
         "title": "Home",
         "desc": "Lamma Cricket Club — competitive and social cricket on Lamma Island, Hong Kong, since 1990.",
         "eyebrow": "Lamma Cricket Club",
-        "banner_title": "",
-        "banner_sub": "",
-        "hide_banner_title": True,
+        "banner_title": "Lamma Cricket Club",
+        "banner_sub": "Solidarity &middot; Sustainability &middot; Pride",
         "bodyclass": "index",
     },
     "our-constitution.html": {
