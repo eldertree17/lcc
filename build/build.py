@@ -11,7 +11,7 @@ PARTIALS = ROOT / "build" / "partials"
 PAGES = ROOT / "build" / "pages"
 
 HEAD = (PARTIALS / "head.html").read_text()
-HEADER = (PARTIALS / "header.html").read_text()
+HEADER_TMPL = (PARTIALS / "header.html").read_text()
 FOOTER = (PARTIALS / "footer.html").read_text()
 
 # slug -> banner/meta config
@@ -20,8 +20,9 @@ PAGES_CONFIG = {
         "title": "Home",
         "desc": "Lamma Cricket Club — competitive and social cricket on Lamma Island, Hong Kong, since 1990.",
         "eyebrow": "Lamma Cricket Club",
-        "banner_title": "Lamma Cricket Club",
-        "banner_sub": "Solidarity · Sustainability · Pride",
+        "banner_title": "",
+        "banner_sub": "",
+        "hide_banner_title": True,
         "bodyclass": "index",
     },
     "our-constitution.html": {
@@ -140,10 +141,18 @@ def render(slug, cfg):
             .replace("{{SLUG}}", slug)
             .replace("{{BODYCLASS}}", cfg["bodyclass"]))
 
-    header = (HEADER
+    # Home page suppresses the big h1 title and sub in the banner
+    if cfg.get("hide_banner_title"):
+        title_html = ""
+        sub_html = ""
+    else:
+        title_html = f'<h1>{cfg["banner_title"]}</h1>'
+        sub_html = f'<p class="lcc-banner__sub">{cfg["banner_sub"]}</p>'
+
+    header = (HEADER_TMPL
               .replace("{{EYEBROW}}", cfg["eyebrow"])
-              .replace("{{TITLE}}", cfg["banner_title"])
-              .replace("{{SUB}}", cfg["banner_sub"]))
+              .replace("{{TITLE_HTML}}", title_html)
+              .replace("{{SUB_HTML}}", sub_html))
 
     return head + header + body + FOOTER
 
