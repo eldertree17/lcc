@@ -1084,7 +1084,7 @@ table.roll-table td:first-child { width: 76px; white-space: nowrap; }
 /* Stat band */
 .roses-statband {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 14px;
   margin-top: 18px;
 }
