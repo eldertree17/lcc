@@ -153,7 +153,7 @@ def render(slug, cfg):
     if banner_logo:
         header_tmpl = HEADER_TMPL.replace("{{BANNER_LOGO}}", banner_logo)
     else:
-        header_tmpl = HEADER_TMPL.replace("            {{BANNER_LOGO}}\n", "")
+        header_tmpl = HEADER_TMPL.replace("              {{BANNER_LOGO}}\n", "")
 
     header = (header_tmpl
               .replace("{{EYEBROW}}", cfg["eyebrow"])
