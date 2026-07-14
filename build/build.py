@@ -47,6 +47,7 @@ PAGES_CONFIG = {
         "banner_title": "The Lamma Roses",
         "banner_sub": "Blooming with pride, backed by the best club in Hong Kong",
         "bodyclass": "teams-womens",
+        "banner_logo": '<img src="assets/img/lamma-roses/roses-logo.jpg" alt="Lamma Roses" class="lcc-banner__logo" />',
     },
     "teams-kids.html": {
         "title": "Kids & Youth",
@@ -148,7 +149,13 @@ def render(slug, cfg):
         title_html = f'<h1>{cfg["banner_title"]}</h1>'
         sub_html = f'<p class="lcc-banner__sub">{cfg["banner_sub"]}</p>'
 
-    header = (HEADER_TMPL
+    banner_logo = cfg.get("banner_logo", "")
+    if banner_logo:
+        header_tmpl = HEADER_TMPL.replace("{{BANNER_LOGO}}", banner_logo)
+    else:
+        header_tmpl = HEADER_TMPL.replace("            {{BANNER_LOGO}}\n", "")
+
+    header = (header_tmpl
               .replace("{{EYEBROW}}", cfg["eyebrow"])
               .replace("{{TITLE_HTML}}", title_html)
               .replace("{{SUB_HTML}}", sub_html))
