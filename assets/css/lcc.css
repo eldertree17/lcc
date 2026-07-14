@@ -1038,55 +1038,220 @@ table.roll-table td:first-child { width: 76px; white-space: nowrap; }
 }
 
 /* ==========================================================================
-   Lamma Roses photo gallery
+   Lamma Roses — women's team page
+   Kit-inspired palette: navy & pink (from the Roses playing shirts)
    ========================================================================== */
-.roses-photo-grid {
+.roses-page {
+  --rose-navy:      #232d5e;
+  --rose-navy-deep: #171e42;
+  --rose-pink:      #ef7fb2;
+  --rose-pink-soft: #fbdceb;
+}
+
+/* Hero statement */
+.roses-hero {
+  background: linear-gradient(120deg, var(--rose-navy) 0%, var(--rose-navy-deep) 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 44px 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.roses-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 6px;
+  background: linear-gradient(90deg, var(--rose-pink), var(--gold));
+}
+.roses-hero .rh-tagline {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(24px, 3.4vw, 36px);
+  line-height: 1.25;
+  margin: 0 0 14px;
+  color: #fff;
+}
+.roses-hero .rh-tagline em { color: var(--rose-pink); font-style: normal; }
+.roses-hero .rh-sub {
+  color: rgba(255,255,255,.82);
+  font-size: 16.5px;
+  max-width: 640px;
+  margin: 0;
+}
+
+/* Stat band */
+.roses-statband {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+.roses-stat {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-bottom: 3px solid var(--rose-pink);
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+.roses-stat .v {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.15;
+  color: var(--rose-navy);
+}
+.roses-stat .k {
+  display: block;
+  margin-top: 5px;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* Editorial story */
+.roses-editorial {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  gap: 40px;
+}
+.roses-editorial h3 {
+  font-size: 22px;
+  color: var(--rose-navy);
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--rose-pink);
+  display: inline-block;
+}
+.roses-editorial p { margin: 0; font-size: 16px; }
+
+/* Support pillars — numbered, no gimmicks */
+.roses-pillars { display: grid; gap: 10px; }
+.roses-pillar {
+  display: grid;
+  grid-template-columns: 56px 220px 1fr;
+  align-items: center;
+  gap: 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: var(--shadow-sm);
+}
+.roses-pillar .num {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--rose-pink);
+  background: var(--rose-navy);
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 8px;
+}
+.roses-pillar .t {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--rose-navy);
+}
+.roses-pillar .d { color: var(--muted); font-size: 15px; }
+
+/* Squad roster */
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 14px;
 }
-.roses-photo-hero {
-  grid-column: 1 / -1;
+.roster-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 18px 16px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.roster-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--rose-navy), var(--rose-pink));
+}
+.roster-card .rc-role {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 700;
+  color: var(--muted);
+}
+.roster-card .rc-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--rose-navy);
+  margin: 3px 0 0;
+}
+.roster-card.captain { background: var(--rose-navy); border-color: var(--rose-navy); }
+.roster-card.captain .rc-role { color: var(--rose-pink); }
+.roster-card.captain .rc-name { color: #fff; }
+.roster-card.captain::after { background: var(--gold); }
+.roster-card .rc-badge {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: var(--gold);
+  color: var(--rose-navy-deep);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+/* Gallery — figures remove themselves if the image file is missing */
+.roses-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 210px;
+  gap: 14px;
+}
+.roses-gallery figure {
   margin: 0;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--line);
   box-shadow: var(--shadow-sm);
-  background: #e8d5e8;
+  position: relative;
 }
-.roses-photo-hero img {
-  width: 100%;
-  height: 380px;
+.roses-gallery figure.wide { grid-column: span 2; grid-row: span 2; }
+.roses-gallery img {
+  width: 100%; height: 100%;
   object-fit: cover;
   display: block;
 }
-.roses-photo {
-  margin: 0;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-sm);
-  background: #e8d5e8;
-  display: flex;
-  flex-direction: column;
+.roses-gallery figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 26px 14px 10px;
+  font-size: 12.5px;
+  color: #fff;
+  background: linear-gradient(180deg, transparent, rgba(23,30,66,.85));
 }
-.roses-photo img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-.roses-photo figcaption,
-.roses-photo-hero figcaption {
-  padding: 10px 14px;
-  font-size: 13px;
-  color: var(--muted);
-  font-style: italic;
-}
-@media (max-width: 640px) {
-  .roses-photo-grid { grid-template-columns: 1fr; }
-  .roses-photo-hero img { height: 240px; }
+
+@media (max-width: 900px) {
+  .roses-statband { grid-template-columns: repeat(2, 1fr); }
+  .roses-editorial { grid-template-columns: 1fr; gap: 24px; }
+  .roses-pillar { grid-template-columns: 44px 1fr; }
+  .roses-pillar .d { grid-column: 2; }
+  .roses-gallery { grid-template-columns: 1fr 1fr; }
+  .roses-gallery figure.wide { grid-column: span 2; grid-row: span 1; }
+  .roses-hero { padding: 30px 26px; }
 }
 
 /* ==========================================================================

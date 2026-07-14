@@ -77,109 +77,145 @@
     </div><!-- end header -->
 
     <div class="main-wrap">
-    <section class="lcc-main">
+    <section class="lcc-main roses-page">
       <div class="container">
 
         <header>
           <span class="eyebrow">Women&rsquo;s Cricket &middot; Lamma Cricket Club</span>
-          <h1 class="page-title">The Lamma Roses</h1>
-          <p class="page-intro">Blooming with pride, backed by the best club in Hong Kong. The Roses are LCC&rsquo;s women&rsquo;s team &mdash; named for the beauty and resilience of the island we call home.</p>
+          <h1 class="page-title" style="color:var(--rose-navy);">The Lamma Roses</h1>
+          <p class="page-intro">A legacy of passion, pride and partnership. Named for the beauty and resilience of the island they call home, the Roses are the heart of LCC&rsquo;s women&rsquo;s programme.</p>
         </header>
 
-        <div class="featured-chair" style="background:linear-gradient(135deg,#8b1a5c 0%,#5c1040 100%);border-left:none;position:relative;overflow:hidden;">
-          <div style="position:absolute;top:0;right:0;width:6px;height:100%;background:var(--gold);"></div>
-          <div class="avatar" style="background:rgba(255,255,255,.15);font-size:26px;color:#fff;border:2px solid rgba(255,255,255,.3);">&#x1F339;</div>
+        <div class="roses-hero">
+          <p class="rh-tagline">Blooming with pride, <em>backed by the best club in Hong Kong.</em></p>
+          <p class="rh-sub">The Lamma Roses proudly represent LCC in competitions including the Hong Kong Women&rsquo;s T10 Cup &mdash; a journey of excellence, determination and unwavering club support.</p>
+        </div>
+
+        <div class="roses-statband">
+          <div class="roses-stat"><span class="v">100%</span><span class="k">Backed by LCC</span></div>
+          <div class="roses-stat"><span class="v">11</span><span class="k">Squad Members</span></div>
+          <div class="roses-stat"><span class="v">3</span><span class="k">Formats &mdash; T10 &middot; T20 &middot; 35-over</span></div>
+          <div class="roses-stat"><span class="v">T10 Cup</span><span class="k">HK Women&rsquo;s Competition</span></div>
+        </div>
+
+        <div class="stump-divider" id="roses-gallery-divider"><div class="stump-icon"><span></span><span></span><span></span></div></div>
+
+        <!-- Gallery — drop photos into assets/img/lamma-roses/ with these filenames -->
+        <div class="roses-gallery" id="roses-gallery">
+          <figure class="wide">
+            <img src="assets/img/lamma-roses/team-photo.jpg" alt="The Lamma Roses squad together at the ground" loading="lazy"
+                 onerror="this.closest('figure').remove()" />
+            <figcaption>The Lamma Roses &mdash; one team, one club</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/lamma-roses/roses-banner.jpg" alt="The squad with the Lamma Roses banner" loading="lazy"
+                 onerror="this.closest('figure').remove()" />
+            <figcaption>Flying the Roses banner</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/lamma-roses/match-action.jpg" alt="Match action" loading="lazy"
+                 onerror="this.closest('figure').remove()" />
+            <figcaption>Match day</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/lamma-roses/training.jpg" alt="Training in the nets" loading="lazy"
+                 onerror="this.closest('figure').remove()" />
+            <figcaption>In the nets</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/lamma-roses/celebration.jpg" alt="Celebrating a win" loading="lazy"
+                 onerror="this.closest('figure').remove()" />
+            <figcaption>Celebrating in front of the scoreboard</figcaption>
+          </figure>
+        </div>
+
+        <script>
+        window.addEventListener('load', function () {
+          var g = document.getElementById('roses-gallery');
+          if (g && !g.querySelector('figure')) {
+            g.remove();
+            var d = document.getElementById('roses-gallery-divider');
+            if (d) d.remove();
+          }
+        });
+        </script>
+
+        <div class="stump-divider"><div class="stump-icon"><span></span><span></span><span></span></div></div>
+
+        <div class="roses-editorial">
           <div>
-            <p class="role" style="color:#f9a8d4;">Blooming on the big stage</p>
-            <p class="name">Proudly representing LCC in the Hong Kong Women&rsquo;s T10 Cup</p>
-            <p class="blurb">100% supported by Lamma Cricket Club &mdash; the Roses are an integral, fully-backed part of the LCC family, carrying the spirit of Lamma Island wherever they play.</p>
+            <h3>Rooted in community</h3>
+            <p>Founded in 1992, Lamma Cricket Club has grown into one of Hong Kong&rsquo;s most distinctive cricketing institutions. With men&rsquo;s, women&rsquo;s and social teams, LCC is a cornerstone of the local cricket scene &mdash; its iconic green and yellow colours a symbol of the club&rsquo;s community-first spirit. At the heart of the women&rsquo;s programme are the Lamma Roses.</p>
           </div>
-        </div>
-
-        <div class="stump-divider"><div class="stump-icon"><span></span><span></span><span></span></div></div>
-
-        <!-- Team photo — drop the squad photo in as assets/img/lamma-roses/team-photo.jpg -->
-        <figure class="roses-photo-hero">
-          <img src="assets/img/lamma-roses/team-photo.jpg" alt="The Lamma Roses squad" loading="lazy"
-               onerror="this.parentElement.style.background='#e8d5e8';this.parentElement.style.minHeight='220px';this.style.display='none'" />
-          <figcaption>The Lamma Roses &mdash; 100% backed by Lamma Cricket Club</figcaption>
-        </figure>
-
-        <div class="stump-divider"><div class="stump-icon"><span></span><span></span><span></span></div></div>
-
-        <div class="section-head">
-          <h2>Rooted in community</h2>
-          <p>Founded in 1992, Lamma Cricket Club has grown into one of Hong Kong&rsquo;s most distinctive cricketing institutions &mdash; men&rsquo;s, women&rsquo;s and social teams, all defined by a community-first spirit and those iconic green and yellow colours. At the heart of the women&rsquo;s game are the Lamma Roses.</p>
-        </div>
-
-        <div class="stump-divider"><div class="stump-icon"><span></span><span></span><span></span></div></div>
-
-        <div class="section-head">
-          <h2>100% supported by LCC</h2>
-          <p>The Roses aren&rsquo;t a separate entity &mdash; they&rsquo;re fully backed by the Club, in every way that matters.</p>
-        </div>
-
-        <div class="committee-grid">
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;">
-            <div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">&#x1F455;</div>
-            <p class="role">Inclusive membership</p>
-            <p class="name" style="font-size:19px;">Kitted out as LCC</p>
-            <p class="desc">Dedicated women&rsquo;s league memberships that include the official LCC player&rsquo;s shirt.</p>
-          </div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;">
-            <div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">&#x1F3CF;</div>
-            <p class="role">Competitive opportunities</p>
-            <p class="name" style="font-size:19px;">Real match cricket</p>
-            <p class="desc">Participation across Hong Kong in 35-over, T20 and T10 formats.</p>
-          </div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;">
-            <div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">&#x1F3AF;</div>
-            <p class="role">Professional coaching</p>
-            <p class="name" style="font-size:19px;">Expert guidance</p>
-            <p class="desc">Coaching and technical support provided throughout the season.</p>
-          </div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;">
-            <div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">&#x1F9F3;</div>
-            <p class="role">Kit &amp; equipment</p>
-            <p class="name" style="font-size:19px;">Ready to play</p>
-            <p class="desc">All necessary gear supplied, so players can focus on their cricket.</p>
-          </div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;">
-            <div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">&#x1F91D;</div>
-            <p class="role">Club-wide spirit</p>
-            <p class="name" style="font-size:19px;">One LCC family</p>
-            <p class="desc">Shared social events, tours and the famous &ldquo;friendship through cricket&rdquo; ethos.</p>
+          <div>
+            <h3>More than a team</h3>
+            <p>The Roses embody what makes Lamma Cricket Club special: inclusivity, excellence and community. Whether competing on the field, touring overseas or inspiring the next generation, they carry the spirit of Lamma Island with them wherever they go.</p>
           </div>
         </div>
 
         <div class="stump-divider"><div class="stump-icon"><span></span><span></span><span></span></div></div>
 
         <div class="section-head">
-          <h2>The Squad</h2>
+          <h2 style="color:var(--rose-navy);">Fully supported by LCC</h2>
+          <p>The Roses are not a separate entity &mdash; they are an integral, fully supported part of Lamma Cricket Club.</p>
         </div>
 
-        <div class="committee-grid">
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;">
-            <div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;font-size:14px;">CAP</div>
-            <p class="role">Captain</p>
-            <p class="name">Joan</p>
+        <div class="roses-pillars">
+          <div class="roses-pillar">
+            <span class="num">01</span>
+            <span class="t">Inclusive membership</span>
+            <span class="d">Dedicated women&rsquo;s league memberships, including the official LCC player&rsquo;s shirt.</span>
           </div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;"><div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">AR</div><p class="role">Player</p><p class="name">Aron</p></div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;"><div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">DO</div><p class="role">Player</p><p class="name">Donna</p></div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;"><div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">MA</div><p class="role">Player</p><p class="name">Maureen</p></div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;"><div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">MY</div><p class="role">Player</p><p class="name">Maryann</p></div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;"><div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">JA</div><p class="role">Player</p><p class="name">Janie</p></div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;"><div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">MJ</div><p class="role">Player</p><p class="name">Majo</p></div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;"><div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">JE</div><p class="role">Player</p><p class="name">Jenny</p></div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;"><div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">MY</div><p class="role">Player</p><p class="name">Myra</p></div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;"><div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">JO</div><p class="role">Player</p><p class="name">Jorie</p></div>
-          <div class="member-card" style="cursor:default;border-top-color:#c0397a;"><div class="avatar-sm" style="background:#8b1a5c;color:#f9a8d4;">RE</div><p class="role">Player</p><p class="name">Rema</p></div>
+          <div class="roses-pillar">
+            <span class="num">02</span>
+            <span class="t">Competitive opportunities</span>
+            <span class="d">Participation across Hong Kong in 35-over, T20 and T10 competitions.</span>
+          </div>
+          <div class="roses-pillar">
+            <span class="num">03</span>
+            <span class="t">Professional coaching</span>
+            <span class="d">Expert coaching and technical guidance provided throughout the season.</span>
+          </div>
+          <div class="roses-pillar">
+            <span class="num">04</span>
+            <span class="t">Kit &amp; equipment</span>
+            <span class="d">All necessary equipment supplied, so players can focus on training and performance.</span>
+          </div>
+          <div class="roses-pillar">
+            <span class="num">05</span>
+            <span class="t">Club-wide spirit</span>
+            <span class="d">Full members of the LCC family &mdash; social events, tours and friendship through cricket.</span>
+          </div>
+        </div>
+
+        <div class="stump-divider"><div class="stump-icon"><span></span><span></span><span></span></div></div>
+
+        <div class="section-head">
+          <h2 style="color:var(--rose-navy);">The Squad</h2>
+        </div>
+
+        <div class="roster-grid">
+          <div class="roster-card captain">
+            <span class="rc-badge">CAPTAIN</span>
+            <p class="rc-role">Leads the side</p>
+            <p class="rc-name">Joan</p>
+          </div>
+          <div class="roster-card"><p class="rc-role">Player</p><p class="rc-name">Aron</p></div>
+          <div class="roster-card"><p class="rc-role">Player</p><p class="rc-name">Donna</p></div>
+          <div class="roster-card"><p class="rc-role">Player</p><p class="rc-name">Maureen</p></div>
+          <div class="roster-card"><p class="rc-role">Player</p><p class="rc-name">Maryann</p></div>
+          <div class="roster-card"><p class="rc-role">Player</p><p class="rc-name">Janie</p></div>
+          <div class="roster-card"><p class="rc-role">Player</p><p class="rc-name">Majo</p></div>
+          <div class="roster-card"><p class="rc-role">Player</p><p class="rc-name">Jenny</p></div>
+          <div class="roster-card"><p class="rc-role">Player</p><p class="rc-name">Myra</p></div>
+          <div class="roster-card"><p class="rc-role">Player</p><p class="rc-name">Jorie</p></div>
+          <div class="roster-card"><p class="rc-role">Player</p><p class="rc-name">Rema</p></div>
         </div>
 
         <div class="stump-divider"><div class="stump-icon"><span></span><span></span><span></span></div></div>
 
         <div class="note-band">
-          More than a team &mdash; the Roses embody LCC&rsquo;s dedication to inclusivity, excellence and community. Want to join? Contact <a class="crosslink" href="the-executive-committee.html">the Executive Committee</a>.
+          Interested in playing for the Lamma Roses? Contact <a class="crosslink" href="the-executive-committee.html">the Executive Committee</a> to find out about women&rsquo;s membership, training and fixtures.
         </div>
 
       </div>
