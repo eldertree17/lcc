@@ -14,6 +14,14 @@ HEAD = (PARTIALS / "head.html").read_text()
 HEADER_TMPL = (PARTIALS / "header.html").read_text()
 FOOTER = (PARTIALS / "footer.html").read_text()
 
+# Default banner logo (the LCC crest). Prefers the newer white version if present,
+# falling back to the existing logo so the banner is never broken.
+DEFAULT_BANNER_LOGO = (
+    '<img src="assets/img/lcc-logo-white.jpeg" alt="Lamma Cricket Club" '
+    'class="lcc-banner__logo" '
+    'onerror="this.onerror=null;this.src=\'assets/img/lcc-logo.png\'" />'
+)
+
 # slug -> banner/meta config
 PAGES_CONFIG = {
     "index.html": {
@@ -149,7 +157,7 @@ def render(slug, cfg):
         title_html = f'<h1>{cfg["banner_title"]}</h1>'
         sub_html = f'<p class="lcc-banner__sub">{cfg["banner_sub"]}</p>'
 
-    banner_logo = cfg.get("banner_logo", "")
+    banner_logo = cfg.get("banner_logo", DEFAULT_BANNER_LOGO)
     if banner_logo:
         header_tmpl = HEADER_TMPL.replace("{{BANNER_LOGO}}", banner_logo)
     else:

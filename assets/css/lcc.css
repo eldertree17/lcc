@@ -1398,6 +1398,7 @@ table.roll-table td:first-child { width: 76px; white-space: nowrap; }
   flex: none;
 }
 .era-head h3 { font-size: clamp(24px, 3.4vw, 32px); margin: 0; font-weight: 600; }
+.era-logo { height: 68px; width: auto; flex: none; object-fit: contain; }
 .era p { margin: 0 0 16px; font-size: 17px; }
 
 .photo-grid {
