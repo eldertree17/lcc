@@ -374,6 +374,9 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 700; color: var(--green
   width: auto;
   object-fit: contain;
 }
+/* For sponsor logos with lots of built-in padding (e.g. Belly and the Beer),
+   give them a larger max-height so their visible mark matches other logos. */
+.footer-sponsors img.sponsor-lg { max-height: 110px; }
 .sponsor-wordmark {
   display: flex;
   flex-direction: column;
@@ -790,7 +793,7 @@ a.member-card { text-decoration: none; color: inherit; display: block; }
 /* League standings cards */
 .standings-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 18px;
 }
 .standing-card {
@@ -1022,9 +1025,11 @@ table.roll-table td {
   hyphens: none;
 }
 table.roll-table thead th { font-size: 11px; letter-spacing: 0; white-space: normal; overflow-wrap: normal; }
-table.roll-table td.rh-fit { font-size: 11px; overflow-wrap: normal; }
 table.roll-table th:first-child,
 table.roll-table td:first-child { width: 76px; white-space: nowrap; }
+/* Give the Events Manager column (9th) a little extra width so long surnames stay on one line */
+table.roll-table th:nth-child(9),
+table.roll-table td:nth-child(9) { width: 12%; }
 
 .records-defs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
 .record-def {
@@ -1510,4 +1515,5 @@ table.roll-table td:first-child { width: 76px; white-space: nowrap; }
   .lcc-main { padding: 36px 0 56px; }
   .footer-sponsors { gap: 24px; padding: 22px; }
   .footer-sponsors img { max-height: 52px; }
+  .footer-sponsors img.sponsor-lg { max-height: 82px; }
 }
