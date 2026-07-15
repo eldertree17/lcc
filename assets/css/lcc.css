@@ -1439,6 +1439,47 @@ table.roll-table td:first-child { width: 76px; white-space: nowrap; }
   margin: 8px 0;
 }
 
+/* Tour destinations */
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 4px 0 22px;
+}
+.tour-chip {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--green);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Feature bullets (history highlights, supporter offer) */
+.feature-list {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+}
+.feature-list li {
+  position: relative;
+  padding: 6px 0 6px 26px;
+  font-size: 17px;
+}
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 15px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
