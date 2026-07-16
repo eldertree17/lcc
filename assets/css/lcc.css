@@ -977,6 +977,23 @@ a.member-card { text-decoration: none; color: inherit; display: block; }
 }
 .honour-img img { width: 100%; height: auto; border-radius: 6px; }
 
+/* Team photos on league pages */
+.team-photo {
+  margin: 6px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  background: var(--card);
+}
+.team-photo img { display: block; width: 100%; height: auto; }
+.team-photo figcaption { padding: 12px 18px; color: var(--muted); font-size: 14.5px; font-weight: 500; }
+.team-photo.is-empty { min-height: 220px; display: grid; place-items: center; background: rgba(0,78,66,.05); }
+.team-photo.is-empty img, .team-photo.is-empty figcaption { display: none; }
+.team-photo.is-empty::after { content: "Team photo coming soon"; color: var(--muted); font-style: italic; font-size: 15px; }
+.team-photos-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 700px) { .team-photos-2 { grid-template-columns: 1fr; } }
+
 .table-wrap { overflow-x: auto; border-radius: 10px; box-shadow: var(--shadow-sm); border: 1px solid var(--line); }
 table.record-table {
   width: 100%;
