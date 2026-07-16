@@ -113,7 +113,9 @@ img { max-width: 100%; display: block; }
 .dusk-header .nav-wrap > .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 8px 30px;
+  flex-wrap: wrap;
   min-height: 64px;
 }
 .dusk-header .logo a,
@@ -169,7 +171,7 @@ img { max-width: 100%; display: block; }
   margin: 0; padding: 0;
   gap: 2px;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .desktop-nav .wsite-menu-item-wrap { position: relative; }
 .desktop-nav .wsite-menu-item,
@@ -241,6 +243,7 @@ img { max-width: 100%; display: block; }
   border-radius: 8px;
   position: relative;
   text-decoration: none;
+  margin-left: auto;
 }
 .hamburger span,
 .hamburger span::before,
