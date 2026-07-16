@@ -5,14 +5,28 @@
   document.addEventListener("DOMContentLoaded", function () {
     /* ---- highlight current page in nav ---- */
     var here = location.pathname.split("/").pop() || "index.html";
+    // Does a top-level nav item link directly to the current page? If so it wins,
+    // and we must not also gold a dropdown parent that points to the same page.
+    var topLevelMatch = false;
+    document.querySelectorAll(".desktop-nav .wsite-menu-default > .wsite-menu-item-wrap > a.wsite-menu-item").forEach(function (a) {
+      var href = (a.getAttribute("href") || "").split("/").pop();
+      if (href && href === here) topLevelMatch = true;
+    });
     document.querySelectorAll(".nav a").forEach(function (a) {
       var href = (a.getAttribute("href") || "").split("/").pop();
-      if (href && href === here) {
-        a.classList.add("active");
+      if (!href || href !== here) return;
+      a.classList.add("active");
+      var sub = a.closest(".wsite-menu-subitem-wrap");
+      if (sub) {
+        sub.classList.add("wsite-nav-current");
+        // Only gold the dropdown parent when the page has no dedicated top-level item
+        if (!topLevelMatch) {
+          var parent = a.closest(".wsite-menu-item-wrap");
+          if (parent) parent.classList.add("active");
+        }
+      } else {
         var wrap = a.closest(".wsite-menu-item-wrap");
         if (wrap) wrap.classList.add("active");
-        var sub = a.closest(".wsite-menu-subitem-wrap");
-        if (sub) sub.classList.add("wsite-nav-current");
       }
     });
 
