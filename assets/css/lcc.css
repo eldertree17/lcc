@@ -1050,6 +1050,9 @@ table.roll-table td:first-child { width: 76px; white-space: nowrap; }
 /* Give the Events Manager column (9th) a little extra width so long surnames stay on one line */
 table.roll-table th:nth-child(9),
 table.roll-table td:nth-child(9) { width: 12%; }
+/* CL Captain Vikings column (5th) — widen so "Wargaonkar" stays on one line */
+table.roll-table th:nth-child(5),
+table.roll-table td:nth-child(5) { width: 12%; }
 
 .records-defs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
 .record-def {
